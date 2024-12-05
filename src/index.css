@@ -2,10 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: "Inter";
+    src: url("./assets/fonts/Inter-VariableFont_opsz,wght.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
 body {
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     overflow-x: hidden;
+
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
 }
 
 #root {

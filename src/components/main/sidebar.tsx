@@ -1,14 +1,18 @@
 import {Button} from "@/components/ui/button.tsx";
 import newspaper from "@/assets/main/newspaper.svg";
+import {NavLink} from "react-router";
+import SidebarButton from "@/components/main/sidebarButton.tsx";
 
 const Sidebar = () => {
     return (
-        <div className={"w-52 h-52 sticky top-8"}>
-            <Button variant={"ghost"} className={"w-full h-10 py-3 px-4 flex gap-2.5 justify-start"}>
-                <img src={newspaper} alt=""/>
-                <span className={"text-slate-900 font-medium"}>Посты</span>
-
-            </Button>
+        <div className={"w-52 h-52 sticky top-8 flex flex-col justify-between"}>
+            <div>
+                <SidebarButton/>
+                <SidebarButton/>
+            </div>
+            <div>
+                <SidebarButton/>
+            </div>
         </div>
     );
 };

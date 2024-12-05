@@ -7,7 +7,7 @@ const Main = () => {
     return (
         <div>
             <Header />
-            <div className={"w-[1248px] flex items-start m-auto gap-8"}>
+            <div className={"w-[1248px] h-full flex items-start m-auto gap-8 mt-12"}>
                 <Sidebar/>
                 <Posts/>
                 <Ad/>
