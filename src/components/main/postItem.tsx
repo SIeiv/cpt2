@@ -5,12 +5,14 @@ import like from "@/assets/main/heart.svg";
 import comment from "@/assets/main/message-circle.svg";
 import {NavLink} from "react-router";
 import {FC} from "react";
+import {Button} from "@/components/ui/button.tsx";
 
 interface postItemProps {
-    type: "default" | "clickable";
+    type: "default" | "clickable" | "writer-default" | "writer-clickable";
 }
 
-const PostItemContent = () => {
+const PostItemContent: FC<postItemProps> = ({type}) => {
+
     return (
         <div className={"flex flex-col gap-4"}>
             <div className={"flex"}>
@@ -36,6 +38,12 @@ const PostItemContent = () => {
                 перспективное планирование не даёт нам иного выбора, кроме определения экономической целесообразности
                 принимаемых решений.
             </Label>
+            {(type === "writer-default" || type === "writer-clickable")
+                && <div className={"flex gap-3"}>
+                    <Button className={"w-[167px] h-10"}>Опубликовать пост</Button>
+                    <Button className={"w-[138px] h-10"} variant={"secondary"}>Редактировать</Button>
+                </div>
+            }
             <div className={"flex gap-3"}>
                 <PostItemButton title={"110"} img={like}/>
                 <PostItemButton title={"110"} img={comment}/>
@@ -46,16 +54,16 @@ const PostItemContent = () => {
 
 const PostItem: FC<postItemProps> = ({type}) => {
 
-    if (type === "clickable") {
+    if (type === "clickable" || type === "writer-clickable") {
         return (
             <NavLink to={"post"} className={"w-full bg-white p-4 rounded-xl hover:bg-slate-200 transition-colors duration-200 cursor-auto"}>
-                <PostItemContent/>
+                <PostItemContent type={type}/>
             </NavLink>
         );
-    } else if (type === "default") {
+    } else if (type === "default" || type === "writer-default") {
         return (
             <div className={"w-full bg-white p-4 rounded-xl"}>
-                <PostItemContent/>
+                <PostItemContent type={type}/>
             </div>
         );
 

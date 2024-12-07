@@ -1,4 +1,3 @@
-import styles from "@/pages/auth/auth.module.css";
 import {Label} from "@/components/ui/label.tsx";
 import AuthInput from "@/pages/auth/auth-input.tsx";
 import {Button} from "@/components/ui/button.tsx";
@@ -6,8 +5,8 @@ import {NavLink} from "react-router";
 
 const Register = () => {
     return (
-        <div className={"bg-slate-50 w-full h-full flex items-center justify-center"}>
-            <div className={styles.registerbox + " bg-white rounded-2xl flex flex-col gap-2.5"}>
+        <div className={"bg-slate-50 w-screen h-screen flex items-center justify-center"}>
+            <div className={"w-[416px] box-border p-4 bg-white rounded-2xl flex flex-col gap-2.5"}>
                 <div>
                     <Label className={"text-xl font-semibold text-slate-900"}>Создать аккаунт</Label>
                 </div>

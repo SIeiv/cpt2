@@ -5,7 +5,7 @@ import Ad from "@/components/main/ad.tsx";
 
 const Main = () => {
     return (
-        <div>
+        <div className={"h-full"}>
             <Header />
             <div className={"w-[1248px] h-full flex items-start m-auto gap-8 mt-12"}>
                 <Sidebar/>
