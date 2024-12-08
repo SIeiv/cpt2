@@ -6,7 +6,7 @@ const DebugMenu = () => {
     return (
         <div className={"fixed bottom-0 left-0 bg-white p-2"}>
             <Label>Debug menu</Label>
-            <div className={"grid gap-2 grid-cols-3"}>
+            <div className={"grid gap-2 grid-cols-1"}>
                 <NavLink to={"/main/writer"}>
                     <Button>Writer</Button>
                 </NavLink>
