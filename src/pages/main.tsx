@@ -1,6 +1,6 @@
-import Header from "@/components/main/header.tsx";
-import Sidebar from "@/components/main/sidebar.tsx";
-import Posts from "@/components/main/posts.tsx";
+import Header from "@/components/main/header/header.tsx";
+import Sidebar from "@/components/main/sidebar/sidebar.tsx";
+import Posts from "@/components/main/posts/posts.tsx";
 import Ad from "@/components/main/ad.tsx";
 
 const Main = () => {

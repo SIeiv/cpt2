@@ -1,5 +1,4 @@
 import {Label} from "@/components/ui/label.tsx";
-import {Input} from "@/components/ui/input.tsx";
 import {FC} from "react";
 
 interface AuthInputProps {
@@ -11,7 +10,10 @@ const AuthInput: FC<AuthInputProps> = ({title, placeholder}) => {
     return (
         <div>
             <Label className={"text-sm font-medium text-slate-900"}>{title}</Label>
-            <Input className={"w-96 h-10 text-xl mt-1.5"} placeholder={placeholder} />
+            <div>
+                <input className={"w-96 h-10 mt-1.5 text-base p-3 border border-slate-300 rounded-md"}
+                       placeholder={placeholder}/>
+            </div>
         </div>
     );
 };

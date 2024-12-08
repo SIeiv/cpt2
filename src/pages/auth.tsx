@@ -1,5 +1,5 @@
-import Register from "@/pages/auth/register.tsx";
-import Login from "@/pages/auth/login.tsx";
+import Register from "@/components/auth/register.tsx";
+import Login from "@/components/auth/login.tsx";
 import { Routes, Route } from "react-router";
 
 const Auth = () => {

@@ -1,0 +1,14 @@
+/*
+.navLink1:hover~.postItem {
+    background-color: red;
+}
+
+.postItem {
+    background-color: white;
+}*/
+
+.block1:hover ~ .block2 h1 { color: red;}
+
+.block1:hover {
+    color: green;
+}
