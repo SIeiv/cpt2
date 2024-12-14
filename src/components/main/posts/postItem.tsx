@@ -83,7 +83,7 @@ const PostItem: FC<postItemProps> = ({type}) => {
                     </div>
                     <div onMouseEnter={handleHoverEnter} onMouseLeave={handleHoverLeave}>
                         <NavLink to={type === "clickable" ? "/main/reader/post" : "/main/writer/post"}
-                                 className={"absolute top-0 rounded-xl w-full h-full cursor-auto"}>
+                                 className={"absolute top-0 rounded-xl w-full h-full cursor-pointer"}>
                         </NavLink>
                     </div>
                 </div>

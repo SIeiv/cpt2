@@ -1,18 +1,11 @@
-import {Button} from "@/components/ui/button.tsx";
-import {NavLink} from "react-router";
+import WriterNavItem from "@/components/main/posts/writer-nav-item.tsx";
 
 const WriterNav = () => {
     return (
         <div className={" h-10 border rounded-md flex items-center justify-center text-sm font-medium p-1"}>
-            <NavLink className={"h-8"} to={"/main/writer/"}>
-                <Button variant={"secondary"} className={"px-3 py-1.5 h-8"}>Все посты</Button>
-            </NavLink>
-            <NavLink className={"h-8"} to={"/main/writer/my"}>
-                <Button variant={"secondary"} className={"px-3 py-1.5 h-8"}>Мои посты</Button>
-            </NavLink>
-            <NavLink className={"h-8"} to={"/main/writer/ch"}>
-                <Button variant={"secondary"} className={"px-3 py-1.5 h-8"}>Черновики</Button>
-            </NavLink>
+            <WriterNavItem text={"Все посты"} to={"/main/writer/m"}/>
+            <WriterNavItem text={"Мои посты"} to={"/main/writer/my"}/>
+            <WriterNavItem text={"Черновики"} to={"/main/writer/сh"}/>
         </div>
     );
 };
