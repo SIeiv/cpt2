@@ -4,8 +4,6 @@ import Main from "@/pages/main.tsx";
 import DebugMenu from "@/components/func/debug-menu.tsx";
 import "@/App.css";
 import Redirect from "@/components/func/redirect.tsx";
-import {useState} from "react";
-import {IPost} from "@/types.ts";
 
 function App() {
     return (
