@@ -1,7 +1,7 @@
 import Auth from "@/pages/auth.tsx";
 import {Routes, Route} from "react-router";
 import Main from "@/pages/main.tsx";
-import DebugMenu from "@/components/func/debug-menu.tsx";
+//import DebugMenu from "@/components/func/debug-menu.tsx";
 import "@/App.css";
 import Redirect from "@/components/func/redirect.tsx";
 import {AppProvider} from "@/context/AppContext.tsx";
@@ -14,7 +14,7 @@ function App() {
     return (
         <AppProvider value={{accessToken, setAccessToken, email, setEmail}}>
             <div className={"w-full h-full bg-slate-50"}>
-                <DebugMenu/>
+                {/*<DebugMenu/>*/}
                 <Routes>
                     <Route path="/auth/*" element={<Auth/>}/>
                     <Route path="/main/*" element={<Main/>}/>
