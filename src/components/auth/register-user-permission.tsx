@@ -1,13 +1,13 @@
 import {Button} from "@/components/ui/button.tsx";
-import {FC, ReactElement, useState} from "react";
+import {FC, ReactElement} from "react";
 
 interface RegisterUserPermissionProps {
     items: Array<string>;
+    activeButton: number;
+    setActiveButton: (active: number) => void;
 }
 
-const RegisterUserPermission: FC<RegisterUserPermissionProps> = ({items}) => {
-
-    const [activeButton, setActiveButton] = useState(0);
+const RegisterUserPermission: FC<RegisterUserPermissionProps> = ({items, activeButton, setActiveButton}) => {
 
     const arrayOfButtons: Array<ReactElement> = items.map((item, index) => {
             if (activeButton === index) {

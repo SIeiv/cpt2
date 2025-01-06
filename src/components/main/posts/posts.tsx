@@ -1,6 +1,6 @@
 import PostItem from "@/components/main/posts/postItem.tsx";
 import {Route, Routes} from "react-router";
-import WriterNav from "@/components/main/posts/writer-nav.tsx";
+//import WriterNav from "@/components/main/posts/writer-nav.tsx";
 import {Button} from "@/components/ui/button.tsx";
 import {useState} from "react";
 import PostDialog from "@/components/main/posts/post-dialog.tsx";
@@ -26,7 +26,7 @@ const Posts = () => {
                 <Route path="writer/*" element={<div className={"h-full"}>
                     <Routes>
                         <Route path={"/*"} element={<div className={"flex items-start flex-col gap-[32px]"}>
-                            <WriterNav/>
+                            {/*<WriterNav/>*/}
                             <Routes>
                                 <Route path={"my"} element={
                                     <div className={"w-full"}>
